@@ -1,24 +1,30 @@
-🍽️ Restaurant Reservation API
+# 🍽️ Restaurant Reservation API
 
 RESTful API built with ASP.NET Core and Clean Architecture (5 layers) for managing the complete reservation lifecycle of a restaurant.
 
 🌐 **Live Demo:** [Swagger UI](https://restaurantapi20260430005542-d8aybah0asg6ekgq.brazilsouth-01.azurewebsites.net/swagger/index.html)
+(Credentials= admin@restaurant.com || Password= Admin123! )
+---
 
-### Tech Stack
-- ASP.NET Core 9 — Web API
-- Clean Architecture — 5 layers (Domain, Application, Infrastructure, API, UnitTests)
-- Entity Framework Core — ORM
-- ASP.NET Core Identity — User management
-- JWT Authentication — Role-based authorization (Admin, Receptionist)
-- ErrorOr — Standardized error handling
-- FluentValidation — Input validation
-- AutoMapper — Object mapping
-- xUnit + NSubstitute + FluentAssertions — Unit testing
-- Swagger / OpenAPI — API documentation
-- SQL Server — Database
-- Azure App Service — Cloud deployment
+## Tech Stack
 
-### Features
+- **ASP.NET Core 9** — Web API
+- **Clean Architecture** — 5 layers (Domain, Application, Infrastructure, API, UnitTests)
+- **Entity Framework Core** — ORM
+- **ASP.NET Core Identity** — User management
+- **JWT Authentication** — Role-based authorization (Admin, Receptionist)
+- **ErrorOr** — Standardized error handling
+- **FluentValidation** — Input validation
+- **AutoMapper** — Object mapping
+- **xUnit + NSubstitute + FluentAssertions** — Unit testing
+- **Swagger / OpenAPI** — API documentation
+- **SQL Server** — Database
+- **Azure App Service** — Cloud deployment
+
+---
+
+## Features
+
 - JWT Authentication with ASP.NET Core Identity
 - Role-based authorization (Admin, Receptionist)
 - Full reservation lifecycle management
@@ -29,22 +35,33 @@ RESTful API built with ASP.NET Core and Clean Architecture (5 layers) for managi
 - Automatic role and admin seeding on startup
 - Unit tests following AAA pattern
 
-### Architecture
-- **Domain** → Entities and business rules
-- **Application** → Use cases, services, interfaces, DTOs
-- **Infrastructure** → Identity, EF Core, repositories
-- **API** → Controllers, middleware, configuration
-- **UnitTests** → Unit tests with xUnit, NSubstitute and FluentAssertions
+---
 
-### Getting Started
+## Architecture
 
-1. **Clone the repository**
+| Layer | Responsibility |
+|-------|---------------|
+| **Domain** | Entities and business rules |
+| **Application** | Use cases, services, interfaces, DTOs |
+| **Infrastructure** | Identity, EF Core, repositories |
+| **API** | Controllers, middleware, configuration |
+| **UnitTests** | Unit tests with xUnit, NSubstitute and FluentAssertions |
 
+---
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/FrancoVen/restaurant-reservation-api.git
+```
 
-2. **Create appsettings.Development.json **
-Create this file inside the Restaurant.API folder:
+### 2. Create appsettings.Development.json
 
+Create this file inside the `Restaurant.API` folder:
+
+```json
 {
   "ConnectionStrings": {
     "DefaultConnection": "your-sql-server-connection-string"
@@ -61,9 +78,12 @@ Create this file inside the Restaurant.API folder:
     "Username": "admin"
   }
 }
+```
 
-Only `DefaultConnection` needs to match your local SQL Server instance. The rest can be copied as-is.
+>  Only `DefaultConnection` needs to match your local SQL Server instance. The rest can be copied as-is.
 
-### 3. Run the following command to apply migrations:
+### 3. Apply migrations
+
+```bash
 update-database -project Restaurant.Infrastructure -startupproject Restaurant.API
-
+```
