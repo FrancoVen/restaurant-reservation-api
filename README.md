@@ -2,8 +2,7 @@
 
 RESTful API built with ASP.NET Core and Clean Architecture (5 layers) for managing the complete reservation lifecycle of a restaurant.
 
-🌐 **Live Demo:** [Swagger UI](https://restaurantapi20260430005542-d8aybah0asg6ekgq.brazilsouth-01.azurewebsites.net/swagger/index.html)
-(Credentials= admin@restaurant.com || Password= Admin123! )
+🌐 **Live Demo:** [Swagger UI](https://restaurantapi20260430005542-d8aybah0asg6ekgq.brazilsouth-01.azurewebsites.net/swagger/index.html) (Email: admin@restaurant.com | Password: Admin123!)
 ---
 
 ## Tech Stack
